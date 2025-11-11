@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="toolbar">
+        <h1>贪吃蛇</h1>
+        <div class="stats">
+          <span>分数：<strong id="score">0</strong></span>
+          <span>最高分：<strong id="highScore">0</strong></span>
+        </div>
+        <div class="controls">
+          <button id="toggleBtn" class="btn">开始</button>
+          <button id="restartBtn" class="btn">重开</button>
+          <label class="speed">
+            速度
+            <input id="speedRange" type="range" min="1" max="10" step="1" value="5" />
+          </label>
+        </div>
+      </header>
+
+      <section class="stage">
+        <canvas id="game" width="600" height="400" aria-label="游戏画布"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <div id="message" class="message"></div>
+        </div>
+      </section>
+
+      <footer class="hint">
+        键盘方向键/WASD 控制移动；空格键开始/暂停。
+      </footer>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
